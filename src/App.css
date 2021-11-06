@@ -1,3 +1,14 @@
+:root {
+  --main-bg-color: #7392b7;
+  --main-bg-second-color: #b3c5d7;
+  --main-bg-third-color: #eee;
+  --main-font-white: white;
+}
+
+body {
+  background-color: var(--main-bg-third-color);
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +16,41 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+header {
+  background: var(--main-bg-color);
+  color: var(--main-font-white);
+  padding: 10px;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.border-none {
+  border: none;
+}
+
+.no-background{
+  background: none;
+}
+
+.container.bg-white {
+  background-color: var(--main-font-white);
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 5%), 0 4px 4px 0 rgb(0 0 0 / 5%);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0px;
+  background: var(--main-bg-color);
+  color: var(--main-font-white);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,0 +1,34 @@
+.title {
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+}
+.field {
+  text-align: right;
+  width: 30%;
+}
+
+.field > div {
+  display: flex;
+}
+
+.field button {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.field input {
+  border-radius: 5px 0px 0px 5px;
+}
+
+@media only screen and (max-width: 975px) {
+  .field {
+    width: 100%;
+  }
+
+  .container form > div {
+    flex-flow: column;
+  }
+  .title {
+    text-align: center;
+  }
+}

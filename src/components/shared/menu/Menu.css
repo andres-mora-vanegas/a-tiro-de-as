@@ -1,0 +1,15 @@
+nav.navbar {
+  background-color: var(--main-bg-second-color) !important;
+}
+#navbarSupportedContent ul{
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+#navbarSupportedContent ul li a{
+    color: #fff;
+}
+.navbar-toggler{
+    display: none;
+}
