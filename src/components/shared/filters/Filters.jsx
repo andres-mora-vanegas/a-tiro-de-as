@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { formSerialize } from "../../util/util";
+import { formSerialize, toLower } from "../../util/util";
 import "./Filters.css";
 
 export const Filters = ({ getFilter, categories }) => {
@@ -9,12 +9,14 @@ export const Filters = ({ getFilter, categories }) => {
     try {
       const form = formSerialize(event.target);
       if (form[action] !== "") {
+        debugger;
+        console.log(`form[action]`, form[action]);
         const filterAction =
           action === "name"
             ? (list) =>
                 list.filter((x) => new RegExp(form[action], "i").test(x.name))
             : action === "category"
-            ? (list) => list.filter((x) => x.category === form[action])
+            ? (list) => list.filter((x) => toLower(x.category) === form[action])
             : (list) =>
                 list.filter(
                   (x) => parseFloat(x.price) <= parseFloat(form[action])

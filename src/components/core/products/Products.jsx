@@ -42,9 +42,8 @@ export const Products = (props) => {
 
   const getFilterData = (filterAction) => {
     let filterData = data;
-    if (filterAction !== false) {
-      filterData = filterAction(data);
-    }
+    if (filterAction !== false) filterData = filterAction(data);
+
     setDataFiltered(filterData);
   };
 
